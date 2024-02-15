@@ -1,0 +1,46 @@
+@use '../../styles/variables';
+
+.theme-switch-button {
+  padding: 0px;
+  border: 0px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease 0s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: variables.$hover-color;
+  }
+}
+
+.theme-switch-button-dark {
+  padding: 0px;
+  border: 0px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease 0s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: variables.$hover-color-darkTheme;
+  }
+}
+
+@media (hover: none) {
+  .theme-switch-button:hover {
+    background-color: transparent;
+  }
+  .theme-switch-button-dark:hover {
+    background-color: transparent;
+  }
+}

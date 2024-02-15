@@ -1,0 +1,141 @@
+.header {
+  border-bottom: 1px solid #dcdcdc;
+  margin-bottom: 48px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease 0s;
+  z-index: 1;
+}
+
+.header-dark {
+  border-bottom: 1px solid #7a7a7a;
+  margin-bottom: 48px;
+  position: sticky;
+  background-color: #333333;
+  top: 0;
+  z-index: 1;
+  transition: background-color 0.3s ease 0s;
+}
+
+.header-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba($color: #333333, $alpha: 0.8);
+  z-index: 50;
+  width: 100%;
+  height: 100vh;
+  pointer-events: all;
+  touch-action: none;
+}
+
+.header-overlay-dark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgba($color: #636363, $alpha: 0.9);
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  width: 100%;
+  height: 100vh;
+  pointer-events: all;
+  touch-action: auto;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  touch-action: all;
+}
+
+.header__buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header__mobile-search-button {
+  height: 25px;
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
+}
+.header__mobile-menu-button {
+  height: 21px;
+}
+
+.header__mobile-buttons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.mobile-search-wrapper {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 70px;
+  padding: 6px 24px 20px 24px;
+  border-bottom: 1px solid #dcdcdc;
+  z-index: 1;
+}
+
+.header__mobile-menu-button {
+  padding: 0px;
+}
+
+.mobile-menu-wrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.header__mobile-menu-button {
+  background-color: transparent;
+  border: 0px;
+}
+
+@media (max-width: 1280px) {
+  .header__content {
+    max-width: 1024px;
+    padding: 0px 8px 0px 24px;
+  }
+}
+
+@media (max-width: 820px) {
+  .header__content {
+    max-width: 820px;
+    padding: 0px 24px;
+  }
+  .header__buttons {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__buttons {
+    & > button:last-child {
+      display: none;
+    }
+  }
+  .header__content {
+    padding: 0px 15px;
+  }
+  .mobile-search-wrapper {
+    padding: 6px 15px 20px 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header__mobile-buttons {
+    gap: 16px;
+  }
+}

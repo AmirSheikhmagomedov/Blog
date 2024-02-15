@@ -1,0 +1,193 @@
+@use 'styles/variables';
+@import url('./styles/_reset.scss');
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'SF Pro Display', sans-serif;
+  background-color: variables.$background-color;
+  color: variables.$primary-color;
+  transition: background-color 0.3s ease 0s;
+  a {
+    text-decoration: none;
+  }
+  padding-bottom: 36px;
+  line-height: 1;
+}
+
+body.dark-theme {
+  background-color: variables.$background-color-darkTheme;
+  color: variables.$primary-color-darkTheme;
+  padding-bottom: 36px;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #afafaf;
+}
+body::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #808080;
+}
+
+body.dark-theme::-webkit-scrollbar {
+  width: 10px;
+}
+
+body.dark-theme::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #808080;
+}
+body.dark-theme::-webkit-scrollbar-track {
+  background-color: #505050;
+}
+body.dark-theme::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
+.ql-editor {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 18px;
+  & img {
+    max-width: 336px;
+    max-height: 189px;
+    object-fit: cover;
+  }
+}
+
+.ql-editor::-webkit-scrollbar {
+  width: 10px;
+}
+
+.ql-editor::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #afafaf;
+}
+
+.ql-editor::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+}
+
+.ql-editor::-webkit-scrollbar-thumb:hover {
+  background-color: #808080;
+}
+
+body.dark-theme .ql-editor::-webkit-scrollbar {
+  width: 10px;
+}
+
+body.dark-theme .ql-editor::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #808080;
+}
+
+body.dark-theme .ql-editor::-webkit-scrollbar-track {
+  background-color: #505050;
+}
+
+body.dark-theme .ql-editor::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
+.ql-video {
+  width: 550px;
+  height: 309.38px;
+  border-radius: 4px;
+}
+
+@media (max-width: 620px) {
+  .ql-video {
+    width: 385px;
+    height: 216.56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ql-video {
+    width: 345px;
+    height: 194.06px;
+  }
+}
+
+@media (max-width: 420px) {
+  .ql-video {
+    width: 290px;
+    height: 163.13px;
+  }
+}
+
+.ql-syntax {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 4px;
+  line-height: 140%;
+}
+
+body.dark-theme .ql-syntax {
+  background-color: #3a3a3a;
+  padding: 15px;
+  border-radius: 4px;
+}
+.ql-toolbar {
+  border-radius: 4px 4px 0px 0px;
+}
+.ql-container {
+  border-radius: 0px 0px 4px 4px;
+}
+
+body.dark-theme .ql-picker-label:before {
+  color: #ffffff;
+}
+
+body.dark-theme .ql-fill {
+  fill: #ffffff;
+}
+
+body.dark-theme .ql-stroke {
+  stroke: #ffffff;
+}
+
+body.dark-theme .ql-toolbar {
+  border: 1px solid #757575;
+}
+body.dark-theme .ql-container {
+  border: 1px solid #757575;
+}
+
+@media (max-width: 768px) {
+  .quill {
+    max-width: 500px;
+    max-height: 240px;
+  }
+}
+
+@media (max-width: 540px) {
+  .quill {
+    max-width: 400px;
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 440px) {
+  .quill {
+    max-width: 250px;
+    max-height: 150px;
+  }
+}
+
+.ql-font {
+  display: none;
+}

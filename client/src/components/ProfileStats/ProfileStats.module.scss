@@ -1,0 +1,84 @@
+@use '../../styles/variables';
+
+.profile-stats {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.profile-stats__avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.profile-stats__name {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.profile-stats__username {
+  margin-bottom: 20px;
+}
+
+.profile-stats__articles-and-followers {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 620px) {
+  .profile-stats {
+    flex-direction: column;
+  }
+
+  .profile-stats__articles-and-followers {
+    justify-content: center;
+  }
+  .profile-stats__name {
+    margin-bottom: 14px;
+  }
+
+  .profile-stats__content {
+    text-align: center;
+  }
+}
+
+.profile-stats__edit-button {
+  background-color: transparent;
+  color: #292929;
+  border: 1px solid #868686;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease 0s;
+  max-height: 36px;
+  &:hover {
+    background-color: variables.$hover-color;
+    color: variables.$primary-color;
+  }
+	margin-right: 16px;
+}
+
+.profile-stats__edit-button-dark {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #868686;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease 0s;
+  max-height: 36px;
+  &:hover {
+    background-color: #505050;
+    color: variables.$primary-color-darkTheme;
+  }
+	margin-right: 16px;
+}

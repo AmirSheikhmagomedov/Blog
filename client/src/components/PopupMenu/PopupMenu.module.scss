@@ -1,0 +1,113 @@
+@use '../../styles/variables';
+
+.popup-menu {
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  width: 160px;
+}
+
+.popup-menu__profile {
+  border-bottom: 1px solid #dcdcdc;
+  padding: 12px 16px 12px 16px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.3s ease 0s;
+  color: variables.$grey-color;
+  &:hover {
+    background-color: variables.$hover-color;
+		color: variables.$grey-color;
+  }
+}
+
+.popup-menu__theme-switch {
+  padding: 12px 16px 12px 16px;
+  border: 0px;
+  background-color: transparent;
+  height: 48px;
+  color: variables.$grey-color;
+  border-bottom: 1px solid #dcdcdc;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.3s ease 0s;
+  cursor: pointer;
+  &:hover {
+    background-color: variables.$hover-color;
+  }
+}
+
+.popup-menu-dark {
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid #666666;
+  border-radius: 4px;
+  width: 160px;
+  background-color: #333333;
+  border-radius: 4px;
+}
+
+.popup-menu__signout {
+  padding: 12px 16px 12px 16px;
+  height: 48px;
+  background-color: transparent;
+  color: variables.$grey-color;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.3s ease 0s;
+  cursor: pointer;
+  &:hover {
+    background-color: variables.$hover-color;
+  }
+}
+
+.popup-menu__profile-dark {
+  border-bottom: 1px solid #666666;
+  padding: 12px 16px 12px 16px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.3s ease 0s;
+  color: variables.$grey-color-darkTheme;
+  &:hover {
+    background-color: variables.$hover-color-darkTheme;
+    color: variables.$grey-color-darkTheme;
+  }
+}
+.popup-menu__theme-switch-dark {
+  padding: 12px 16px 12px 16px;
+  border: 0px;
+  background-color: transparent;
+  height: 48px;
+  color: variables.$grey-color-darkTheme;
+  border-bottom: 1px solid #666666;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.3s ease 0s;
+  cursor: pointer;
+  &:hover {
+    background-color: variables.$hover-color-darkTheme;
+  }
+}
+.popup-menu__signout-dark {
+  padding: 12px 16px 12px 16px;
+  height: 48px;
+  background-color: transparent;
+  color: variables.$grey-color-darkTheme;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.3s ease 0s;
+  cursor: pointer;
+  &:hover {
+    background-color: variables.$hover-color-darkTheme;
+  }
+}

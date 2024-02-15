@@ -1,0 +1,92 @@
+@use '../../styles/variables';
+
+.search {
+  display: flex;
+  gap: 1px;
+}
+
+.search__input {
+  background-color: #ebebeb;
+  border: 0px;
+  width: 200px;
+  color: variables.$primary-color;
+  height: 32px;
+  padding: 8px 16px;
+  border-radius: 4px 0px 0px 4px;
+  outline: 0px;
+	transition: background-color .3s ease 0s;
+  &::placeholder {
+    color: #787878;
+  }
+  &:focus {
+    border: 1px solid variables.$grey-color;
+    padding: 7px 15px;
+  }
+}
+
+.search__button {
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 4px 4px 0px;
+  outline: 0px;
+  transition: background-color 0.3s ease 0s;
+  background-color: #ebebeb;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #c0c0c0;
+  }
+
+  &:focus {
+    border: 1px solid variables.$grey-color;
+    padding: 0px 5px;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.search__input-dark {
+  background-color: #606060;
+  color: variables.$primary-color-darkTheme;
+  border: 0px;
+  width: 200px;
+  height: 32px;
+  padding: 8px 16px;
+  border-radius: 4px 0px 0px 4px;
+  outline: 0px;
+	transition: background-color .3s ease 0s;
+  &::placeholder {
+    color: #c0c0c0;
+  }
+  &:focus {
+    border: 1px solid #a0a0a0;
+    padding: 7px 15px 7px 15px;
+  }
+}
+
+.search__button-dark {
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 4px 4px 0px;
+  outline: 0px;
+  transition: background-color 0.3s ease 0s;
+  cursor: pointer;
+  background-color: #606060;
+
+  &:hover {
+    background-color: #505050;
+  }
+
+  &:focus {
+    border: 1px solid #a0a0a0;
+    padding: 0px 5px;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
